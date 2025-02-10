@@ -1,0 +1,11 @@
+/* primul paragraf care se afla dupa div */
+div + p {
+    color: red;
+}
+
+/* toate elementele imediat de dupa div */
+div ~ p{
+    color: red;
+}
+
+
