@@ -1,5 +1,5 @@
 body{
-    background-image: url(../rocket.png), url(../earth.png), url(../space2.png);
+    background-image: url(../img/rocket.png), url(../img/earth.png), url(../img/space2.png);
     background-repeat: no-repeat,no-repeat,repeat;
     background-size: auto,20%,auto;
     background-position: 20% 20%,center center, 0% 0%;
