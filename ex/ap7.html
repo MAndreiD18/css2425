@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function adauga(arr){
+            let a = Number(arr.join(''));
+            return a+1;
+        }
+
+        console.log(adauga([1,2,9,9]))
+
+
+        function plusOne(digits){
+            for(let i = digits.length -1; i>=0;i--){
+                if(digits[i]<9){
+                    digits[i]++;
+                    return digits;
+                }
+                digits[i] = 0;
+            }
+        }
+    </script>
+</body>
+</html>

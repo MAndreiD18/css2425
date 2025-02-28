@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const countChars = (str,char) => 
+        // str.split('').filter(ch => ch === char).length;
+
+        // const contains2To4 = (str,char) =>
+        // countChars(str,char) >= 2 && countChars(str,char) <=4;
+
+        // console.log(contains2To4("ooh!", 'o'))
+        // console.log(contains2To4("ooh!", 'o'))
+        // console.log(contains2To4("oooh!", 'o'))
+        // console.log(contains2To4("ooooooh!", 'o'))
+
+
+
+        const string = (str,char) =>
+        str.split('').filter(ch => ch === char).length;
+
+        const string2to4 = (str,char) => string(str,char) >=2 && string(str,char) <=4
+        console.log(string2to4("ooooooooooh","o"))
+        console.log(string2to4("oooh","o"))
+    </script>
+</body>
+</html>

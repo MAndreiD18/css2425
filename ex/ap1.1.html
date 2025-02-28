@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function type(a){
+    //         if (a.length <=3){
+    //             return a
+    //         }
+    //         else{
+    //             let newStr = a.slice(0, 3) + a.slice(-3);
+    //         if (newStr.length < 3) {
+    //         return a; // Dacă stringul rezultat e mai mic de 3 caractere, returnezi originalul
+            
+    //     } else {
+    //         return newStr; // Dacă nu, returnezi stringul rezultat
+    //     }
+    // }}
+    // console.log(type('abcde'));
+    // console.log(type('ab'));
+    // console.log(type('abcdefgjkjl'));
+    // console.log(type('a'));
+
+
+
+    const makeNewString = (str) =>
+        str.length <3 ? str : str.slice(0,3) +str.slice(-3);
+        console.log(makeNewString("abc"))
+        console.log(makeNewString("abcdef"))
+        console.log(makeNewString("abc1233abc123"))
+        console.log(makeNewString("ab"));
+        
+    </script>
+</body>
+</html>

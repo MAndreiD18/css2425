@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a =(date = new Date()) =>{
+            const days = date.getDate() ;
+            const months = date.getMonth() +1 ;
+            const years = date.getFullYear();
+            return `${days}/${months}/${years}`;
+        };
+
+        function date (b){
+            const days = b.getDate();
+            const months = b.getMonth();
+            const years = b.getFullYear();
+            return `date is : ${days}-${months}-${years}`;
+        }
+        let b = new Date();
+        console.log(date(b));
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function extract(str){
+        if(str.length %2 ===0 || str.length){
+            let a = str.slice(0,str.length/2);
+            return a;  
+        }
+        // else{
+        //     return "nu e par";
+        // }
+    }
+        console.log(extract("abcdefd"));
+
+
+    // const firstHalf = (str) => str.slice(0,str.length/2);
+    // console.loog(firstHalf('temp'));
+    // console.loog(firstHalf('temple'));
+    // console.loog(firstHalf('temples'));
+  
+    </script>
+</body>
+</html>

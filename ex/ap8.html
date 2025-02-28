@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = [
+            {firstName: "Aaron",lastName:'Garrett', DOB:'09/04/1985',department:'Development',salary: '49000'},
+            {firstName: "Aalkj",lastName:'Garrelkjlkj', DOB:'09/08/1985',department:'Sales',salary: '9000'},
+            {firstName: "Alkjlkjon",lastName:'kjlkjtt', DOB:'09/12/1985',department:'IT',salary: '12000'},
+            {firstName: "Aakn",lastName:'Gktt', DOB:'07/04/1985',department:'Engineer',salary: '7000'},
+            {firstName: "Alkjlkjn",lastName:'Galkjlkjt', DOB:'12/04/1985',department:'customers',salary: '89000'},
+            {firstName: "Alkjon",lastName:'Glkjrett', DOB:'08/04/1985',department:'Office Management',salary: '10000'},
+            {firstName: "Alkjon",lastName:'KJKJ', DOB:'09/04/2000',department:'Development',salary: '56000'},
+        ];
+
+        // salariul total
+       const salariu = array.reduce((suma,person) => suma+ Number(person.salary),0);
+       console.log("total salarii: ",salariu);
+
+       //nunmele oamenilor care au mai mult de 30 ani
+       let a = array.filter(person => new Date().getFullYear() - new Date(person.DOB).getFullYear() >30);
+       console.log(a)
+
+        //numele si prenumele
+
+        //array.map(person => `${person.firstName} ${person.lastName}`)
+       let b =  array.map(({firstName,lastName})=>`${firstName} ${lastName}`);
+       console.log(b)
+
+
+       //de la cel mai tanar la cel mai batran
+       let c = array.sort((personA,personB)=> new Date(personB.DOB) - new Date(personA.DOB));
+        console.log(c);
+
+        let d = array.reduce((accumulator,person)=> ({...accumulator,[person.department]:accumulator[person.department]+1 || 1}), {})
+        console.log(d)
+
+        
+    </script>
+</body>
+</html>
