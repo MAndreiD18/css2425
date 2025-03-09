@@ -25,7 +25,7 @@ export default defineConfig({
     plugins: [
         createHtmlPlugin({
             minify: false, // Minimizează HTML
-            template: './src/index.html?row',
+            template: './index.html',
             inject: {
                 data: {
                     head: head,
@@ -44,7 +44,7 @@ export default defineConfig({
                 tags: [
                     {
                         tag: 'script',
-                        attrs: { type: 'module', src: '/assets/js/main.js' },
+                        attrs: { type: 'module', src: '/src/assets/js/main.js' },
                         injectTo: 'body' // Injectează la sfârșitul <body>
                     }
                 ],
@@ -53,7 +53,7 @@ export default defineConfig({
         viteStaticCopy({
             targets: [
                 {
-                    src: 'assets/', // Folderul sursă
+                    src: './src/assets/', // Folderul sursă
                     dest: '' // Copiază direct în /dist/
                 }
             ]
@@ -77,7 +77,7 @@ export default defineConfig({
         rollupOptions: {
             preserveEntrySignatures: 'strict', // Păstrează fiecare fișier separat
             input: {
-                main: './src/index.html', // Se asigură că Vite include toate fișierele din HTML
+                main: 'index.html', // Se asigură că Vite include toate fișierele din HTML
             },
             output: {
                 // assetFileNames: "assets/css/[name]-[hash][extname]", // Optimizare CSS/JS
